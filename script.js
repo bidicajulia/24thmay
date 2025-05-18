@@ -45,10 +45,13 @@ function checkAnswer(index) {
       document.querySelector(".quiz-container").classList.add("hidden");
       document.getElementById("result-box").classList.remove("hidden");
       confetti({
-        particleCount: 200,
-        spread: 100,
-        origin: { y: 0.6 }
+      particleCount: 500,
+      spread: 180,
+      startVelocity: 70,
+      scalar: 1.4,
+      origin: { y: 0.6 }
       });
+
     }
   } else {
     alert("Oops! Wrong answer. Try again!");
