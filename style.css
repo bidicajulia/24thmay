@@ -68,12 +68,12 @@ body {
 }
 
 .ticket-img {
-  max-width: 90%;
+  max-width: 93%;
   height: auto;
   margin-top: 20px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
+  transform: scale(1.08);
   transition: transform 0.3s ease;
 }
 
