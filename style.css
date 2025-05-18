@@ -15,53 +15,6 @@ body {
   background-color: transparent;
 }
 
-.hearts-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.heart {
-  position: absolute;
-  font-size: 2rem;
-  animation: float 10s infinite ease-in;
-  color: white;
-  opacity: 0.8;
-}
-
-.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-.heart:nth-child(2) { left: 20%; animation-delay: 1s; }
-.heart:nth-child(3) { left: 30%; animation-delay: 2s; }
-.heart:nth-child(4) { left: 40%; animation-delay: 3s; }
-.heart:nth-child(5) { left: 50%; animation-delay: 4s; }
-.heart:nth-child(6) { left: 60%; animation-delay: 5s; }
-.heart:nth-child(7) { left: 70%; animation-delay: 6s; }
-.heart:nth-child(8) { left: 80%; animation-delay: 7s; }
-.heart:nth-child(9) { left: 90%; animation-delay: 8s; }
-.heart:nth-child(10) { left: 95%; animation-delay: 9s; }
-
-@keyframes float {
-  0% {
-    bottom: -10%;
-    transform: translateX(0) rotate(0deg);
-  }
-  100% {
-    bottom: 110%;
-    transform: translateX(30px) rotate(360deg);
-  }
-}
-
-h1 {
-  font-size: 2rem;
-  margin-top: 140px;
-  z-index: 1;
-  position: relative;
-}
-
 #startBtn {
   padding: 20px 40px;
   font-size: 1.5rem;
@@ -115,10 +68,17 @@ h1 {
 }
 
 .ticket-img {
-  max-width: 100%;
+  max-width: 90%;
+  height: auto;
   margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.ticket-img:hover {
+  transform: scale(1.15);
 }
 
 .final-message {
@@ -127,11 +87,31 @@ h1 {
   font-size: 1.3rem;
 }
 
-.confetti {
+#heart-wrapper {
   position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
   pointer-events: none;
-  background: url('https://i.gifer.com/7efs.gif') center/cover no-repeat;
-  opacity: 0.5;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 2.2rem;
+  animation: floatHearts 8s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2);
+    opacity: 0;
+  }
 }
