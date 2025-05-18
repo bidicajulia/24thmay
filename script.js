@@ -18,6 +18,12 @@ const questions = [
 
 let current = 0;
 
+document.getElementById("startBtn").addEventListener("click", () => {
+  document.getElementById("intro").classList.add("hidden");
+  document.querySelector(".quiz-container").classList.remove("hidden");
+  showQuestion();
+});
+
 function showQuestion() {
   const question = questions[current];
   document.getElementById("question-text").innerText = question.text;
@@ -44,5 +50,3 @@ function checkAnswer(index) {
     alert("Oops! Wrong answer. Try again!");
   }
 }
-
-showQuestion();
