@@ -60,16 +60,27 @@ const emojis = ["❤️", "💖", "💘", "💝", "💗", "💕", "💞", "💓"
 const wrapper = document.getElementById("heart-wrapper");
 
 function createHearts() {
-  for (let i = 0; i < 30; i++) {
+ const emojis = ["❤️", "💖", "💘", "💝", "💗", "💕", "💞", "💓"];
+const wrapper = document.getElementById("heart-wrapper");
+
+function createHearts() {
+  for (let i = 0; i < 50; i++) {
     const heart = document.createElement("div");
     heart.classList.add("floating-heart");
     heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-    heart.style.left = `${Math.random() * 100}%`;
-    heart.style.top = `${Math.random() * 100}%`;
-    heart.style.fontSize = `${1.5 + Math.random() * 2.5}rem`;
+
+    heart.style.left = `${Math.random() * 100}vw`;
+    heart.style.bottom = `-${Math.random() * 20}vh`;
+    heart.style.fontSize = `${1 + Math.random() * 2}rem`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
+    heart.style.animationDelay = `${Math.random() * 5}s`;
+
     wrapper.appendChild(heart);
   }
+}
+
+createHearts();
+
 }
 
 createHearts();
