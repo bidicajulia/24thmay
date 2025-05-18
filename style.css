@@ -1,18 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;800&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Raleway', sans-serif;
   background: linear-gradient(to right, #ff5e62, #ff9966);
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 60px 20px;
+  height: 100vh;
+  padding: 20px;
   color: white;
-  position: relative;
-  min-height: 100vh;
   background-color: transparent;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  max-width: 90%;
+  line-height: 1.2;
 }
 
 #startBtn {
@@ -44,7 +57,8 @@ body {
   text-align: center;
   max-width: 700px;
   margin: 80px auto;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .hidden {
@@ -68,50 +82,18 @@ body {
 }
 
 .ticket-img {
-  max-width: 93%;
-  height: auto;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transform: scale(1.08);
-  transition: transform 0.3s ease;
-}
-
-.ticket-img:hover {
-  transform: scale(1.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .final-message {
-  margin-top: 15px;
+  margin-top: 20px;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-#heart-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.floating-heart {
-  position: absolute;
-  font-size: 2.2rem;
-  animation: floatHearts 8s linear infinite;
-  opacity: 0.9;
-}
-
-@keyframes floatHearts {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(1.2);
-    opacity: 0;
-  }
-}
+/* Hearts + confetti se pot lăsa cum sunt dacă vrei */
