@@ -65,7 +65,7 @@ function createHearts() {
     heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     heart.style.left = `${Math.random() * 100}vw`;
     heart.style.bottom = `-${Math.random() * 20}vh`;
-    heart.style.fontSize = `${2 + Math.random() * 3}rem`;
+    heart.style.fontSize = `${5 + Math.random() * 9}rem`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
     heart.style.animationDelay = `${Math.random() * 4}s`;
     wrapper.appendChild(heart);
