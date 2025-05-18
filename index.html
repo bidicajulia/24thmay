@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Quiz</title>
+  <title>Quiz for Bartli</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>Quiz</h1>
+  <div id="intro" class="intro">
+    <div class="hearts">❤️💖💘💕💞💗💓❣️💝💟❤️💖💘💕💞💗💓❣️💝💟</div>
+    <h1>Happy birthday to my favourite person everrrrrr!</h1>
+    <button id="startBtn">🎁 PRESS FOR START 🎁</button>
+  </div>
+
+  <div class="quiz-container hidden">
+    <h2>Birthday Quiz</h2>
     <div id="question-box">
       <p id="question-text"></p>
       <div id="answers"></div>
     </div>
   </div>
+
   <div id="result-box" class="hidden">
-    <h2>Congratulations!</h2>
-    <p>You answered all questions correctly!</p>
-    <p>Here’s your surprise:</p>
-    <img src="biletef1.png" alt="Tickets" class="ticket-img">
-    <div class="bubbles"></div>
+    <h2>🎉 Happy birthdayyy ! 🎉</h2>
+    <p>Here is my present for your 33th birthday 💛</p>
+    <img src="bilete.png" alt="Tickets" class="ticket-img">
+    <p class="final-message">
+      With love, your one and only July ❤️<br>
+      (hope its a nice present!)
+    </p>
+    <div class="confetti"></div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
