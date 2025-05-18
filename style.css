@@ -1,42 +1,80 @@
 body {
   margin: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(135deg, #ffc0cb, #ffb6c1, #fff0f5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .intro {
   text-align: center;
-  padding: 30px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px;
+  color: white;
+  position: relative;
+  min-height: 100vh;
+  background-color: transparent;
 }
 
-.intro .hearts {
+.hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
   font-size: 2rem;
-  animation: floatHearts 2s infinite alternate ease-in-out;
+  animation: float 10s infinite ease-in;
+  color: white;
+  opacity: 0.8;
 }
 
-@keyframes floatHearts {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+.heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+.heart:nth-child(7) { left: 70%; animation-delay: 6s; }
+.heart:nth-child(8) { left: 80%; animation-delay: 7s; }
+.heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+.heart:nth-child(10) { left: 95%; animation-delay: 9s; }
+
+@keyframes float {
+  0% {
+    bottom: -10%;
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    bottom: 110%;
+    transform: translateX(30px) rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 140px;
+  z-index: 1;
+  position: relative;
 }
 
 #startBtn {
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 20px 40px;
+  font-size: 1.5rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ff69b4;
   color: white;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 40px;
   animation: pulse 1s infinite;
+  z-index: 1;
+  position: relative;
 }
 
 @keyframes pulse {
@@ -46,13 +84,14 @@ body {
 }
 
 .quiz-container, #result-box {
-  background: #fffafa;
-  padding: 30px 40px;
+  background: #fff0f5;
+  padding: 40px 50px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   text-align: center;
-  max-width: 600px;
-  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 80px auto;
+  font-size: 1.5rem;
 }
 
 .hidden {
@@ -67,7 +106,7 @@ body {
   background-color: #ff69b4;
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -85,7 +124,7 @@ body {
 .final-message {
   margin-top: 15px;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .confetti {
@@ -94,5 +133,5 @@ body {
   height: 100%;
   pointer-events: none;
   background: url('https://i.gifer.com/7efs.gif') center/cover no-repeat;
-  opacity: 0.4;
+  opacity: 0.5;
 }
