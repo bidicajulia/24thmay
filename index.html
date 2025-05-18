@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Quiz</title>
+  <title>Birthday Surprise</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <div class="hearts-container" id="heart-wrapper"></div>
-  
   <div id="intro" class="intro">
-  
-    <h1>Happy birthday to my favourite person everrrrrr!</h1>
-    <button id="startBtn">🎁 PRESS FOR START 🎁</button>
+    <div class="hearts-container" id="heart-wrapper"></div>
+    <div class="intro-content">
+      <h1>Happy birthday to my favourite person everrrrrr!</h1>
+      <button id="startBtn">🎁 PRESS FOR START 🎁</button>
+    </div>
   </div>
 
   <div class="quiz-container hidden">
-    <h2>Quiz</h2>
+    <h2>Birthday Quiz</h2>
     <div id="question-box">
       <p id="question-text"></p>
       <div id="answers"></div>
@@ -24,9 +24,9 @@
   </div>
 
   <div id="result-box" class="hidden">
-    <h2>🎊🎉 Happy birthday! 🎉🎊</h2>
+    <h2>🎉 Happy birthday! 🎉</h2>
     <p style="font-size: 1.5rem;">Here is my present for your 33th birthday 💛</p>
-    <img src="biletef1.PNG" alt="Tickets" class="ticket-img" />
+    <img src="biletef1.png" alt="Tickets" class="ticket-img" />
     <p class="final-message">
       With love, your one and only July ❤️<br />
       (hope you enjoy my present!)
