@@ -2,30 +2,33 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Raleway', sans-serif;
   background: linear-gradient(to right, #ff5e62, #ff9966);
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* CENTRARE ȘI DIMENSIONARE TEXT DE INTRO */
+/* INTRO PAGE */
 .intro {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
-  padding: 10vw;
-  box-sizing: border-box;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
   color: white;
+  padding: 20px;
 }
 
 .intro h1 {
   font-size: 7vw;
   font-weight: 900;
-  line-height: 1.2;
   margin-bottom: 30px;
 }
 
@@ -39,6 +42,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   animation: pulse 1s infinite;
+  z-index: 2;
 }
 
 @keyframes pulse {
@@ -47,7 +51,36 @@ body {
   100% { transform: scale(1); }
 }
 
-/* QUIZ & REZULTAT */
+/* HEARTS */
+.hearts-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-heart {
+  position: absolute;
+  animation: floatHearts linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* QUIZ + RESULT */
 .quiz-container, #result-box {
   background: #fff0f5;
   padding: 40px 30px;
@@ -58,10 +91,6 @@ body {
   margin: 60px auto;
   font-size: 1.3rem;
   font-weight: 600;
-}
-
-.hidden {
-  display: none;
 }
 
 #answers button {
@@ -80,7 +109,10 @@ body {
   background-color: #e754a0;
 }
 
-/* IMAGINE BILETE */
+.hidden {
+  display: none;
+}
+
 .ticket-img {
   width: 100%;
   max-width: 700px;
@@ -94,35 +126,6 @@ body {
   font-style: italic;
   font-size: 1.2rem;
   font-weight: 500;
-}
-
-/* INIMIOARE */
-#heart-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.floating-heart {
-  position: absolute;
-  animation: floatHearts linear infinite;
-  opacity: 0.9;
-}
-
-@keyframes floatHearts {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-120vh) scale(1.2);
-    opacity: 0;
-  }
 }
 
 /* RESPONSIVE */
