@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Birthday Surprise Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <div id="intro" class="intro">
-    <div class="hearts-container">
-      <div class="heart">❤️</div>
-      <div class="heart">💖</div>
-      <div class="heart">💘</div>
-      <div class="heart">💕</div>
-      <div class="heart">💞</div>
-      <div class="heart">💗</div>
-      <div class="heart">💓</div>
-      <div class="heart">💟</div>
-      <div class="heart">❣️</div>
-      <div class="heart">💝</div>
-    </div>
+    <div class="hearts-container" id="heart-wrapper"></div>
     <h1>Happy birthday to my favourite person everrrrrr!</h1>
     <button id="startBtn">🎁 PRESS FOR START 🎁</button>
   </div>
@@ -32,14 +22,13 @@
   </div>
 
   <div id="result-box" class="hidden">
-    <h2>🎉 Happy birthday! 🎉</h2>
-    <p>Here is my present for your 33th birthday 💛</p>
-    <img src="bilete.png" alt="Tickets" class="ticket-img">
+    <h2>🎊🎉 Happy Birthday! 🎉🎊</h2>
+    <p style="font-size: 1.5rem;">Here is my present for your 33rd birthday 💛</p>
+    <img src="bilete.png" alt="Tickets" class="ticket-img" />
     <p class="final-message">
-      With love, your one and only July ❤️<br>
-      (hope its a nice present!)
+      With love, your one and only July ❤️<br />
+      (hope it's a nice present!)
     </p>
-    <div class="confetti"></div>
   </div>
 
   <script src="script.js"></script>
