@@ -16,7 +16,7 @@ const questions = [
   },
   {
     text: "Who is Charles Leclerc's biggest rival?",
-    answers: ["Ferarri's strategy team", "Verstappen", "Checo", "Street circuits"],
+    answers: ["Ferrari's strategy team", "Verstappen", "Checo", "Street circuits"],
     correct: 0
   },
   {
@@ -35,6 +35,7 @@ const questions = [
     correct: 0
   }
 ];
+
 
 let current = 0;
 
