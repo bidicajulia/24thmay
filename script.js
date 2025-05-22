@@ -58,7 +58,7 @@ function checkAnswer(index) {
   }
 }
 
-const emojis = ["❤️", "💖", "💘", "💝", "💗", "💕", "💞", "💓"];
+//const emojis = ["❤️", "💖", "💘", "💝", "💗", "💕", "💞", "💓"];
 const wrapper = document.getElementById("heart-wrapper");
 
 function createHearts() {
@@ -75,5 +75,5 @@ function createHearts() {
   }
 }
 
-createHearts();
+//createHearts();
 showQuestion();
