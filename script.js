@@ -20,7 +20,7 @@ const questions = [
     correct: 0
   },
   {
-    text: "Is there a leakage? — 'A leakage of what?' — 'I have the seat full of water... Must be the ____?'",
+    text: "Is there a leakage? 'A leakage of what?' 'I have the seat full of water... Must be the ____?'",
     answers: ["tyres", "engine", "rain", "water"],
     correct: 3
   },
@@ -88,7 +88,7 @@ function createHearts() {
     heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     heart.style.left = `${Math.random() * 100}vw`;
     heart.style.bottom = `-${Math.random() * 20}vh`;
-    heart.style.fontSize = `${3 + Math.random() * 3}rem`;
+    heart.style.fontSize = `${3 + Math.random() * 4}rem`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
     heart.style.animationDelay = `${Math.random() * 2}s`;
     wrapper.appendChild(heart);
