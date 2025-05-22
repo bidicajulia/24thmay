@@ -2,35 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Birthday Surprise</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <div id="intro" class="intro">
-    <div class="hearts-container" id="heart-wrapper"></div>
+  <!-- INTRO PAGE -->
+  <div class="intro" id="intro">
     <div class="intro-content">
-      <h1>Happy birthdayyyyyyyyyyyyy!</h1>
-      <button id="startBtn">🎁 PRESS FOR START 🎁</button>
+      <h1>F1 QUIZ</h1>
+      <button id="startBtn">Start Quiz</button>
     </div>
   </div>
 
+  <!-- QUIZ PAGE -->
   <div class="quiz-container hidden">
-    <h2>Birthday Quiz</h2>
-    <div id="question-box">
-      <p id="question-text"></p>
-      <div id="answers"></div>
-    </div>
+    <div id="question-text"></div>
+    <div id="answers"></div>
   </div>
 
+  <!-- RESULT PAGE -->
   <div id="result-box" class="hidden">
-    <h2>🎉 Happy birthday! 🎉</h2>
-    <p style="font-size: 1.5rem;">Here is my present for your birthday 💛</p>
-    <img src="biletef1.PNG" alt="Tickets" class="ticket-img" />
-    <p class="final-message">
-      ❤️<br />
-      (hope you enjoy my present!)
-    </p>
+    <h2>Congratulations! 🏁</h2>
+    <p class="final-message">You're a true Formula 1 fan!</p>
+    <img src="ticket.jpg" alt="Your ticket" class="ticket-img"/>
+    <div id="heart-wrapper" class="hearts-container"></div>
   </div>
 
   <script src="script.js"></script>
