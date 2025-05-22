@@ -41,6 +41,7 @@ let current = 0;
 document.getElementById("startBtn").addEventListener("click", () => {
   document.getElementById("intro").classList.add("hidden");
   document.querySelector(".quiz-container").classList.remove("hidden");
+  showQuestion();
 });
 
 function showQuestion() {
@@ -65,13 +66,12 @@ function checkAnswer(index) {
       document.querySelector(".quiz-container").classList.add("hidden");
       document.getElementById("result-box").classList.remove("hidden");
       confetti({
-          particleCount: 500,
-          spread: 180,
-          startVelocity: 70,
-          scalar: 1.4,
-          origin: { y: 0.6 }
+        particleCount: 500,
+        spread: 180,
+        startVelocity: 70,
+        scalar: 1.4,
+        origin: { y: 0.6 }
       });
-
     }
   } else {
     alert("Oops! Wrong answer. Try again!");
@@ -88,12 +88,11 @@ function createHearts() {
     heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     heart.style.left = `${Math.random() * 100}vw`;
     heart.style.bottom = `-${Math.random() * 20}vh`;
-    heart.style.fontSize = `${3 + Math.random() * 4}rem`;
+    heart.style.fontSize = `${3 + Math.random() * 3}rem`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
-    heart.style.animationDelay = `${Math.random() * 4}s`;
+    heart.style.animationDelay = `${Math.random() * 2}s`;
     wrapper.appendChild(heart);
   }
 }
 
 createHearts();
-showQuestion();
