@@ -77,3 +77,5 @@ function createHearts() {
 
 //createHearts();
 showQuestion();
+document.querySelectorAll(".floating-heart").forEach(el => el.remove());
+
