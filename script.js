@@ -5,14 +5,34 @@ const questions = [
     correct: 2
   },
   {
-    text: "How many wheels does an F1 car have?",
-    answers: ["2", "4", "6", "8"],
-    correct: 1
+    text: "Who holds the record for most consecutive podium finishes in F1?",
+    answers: [" Michael Schumacher", "Sebastian Vettel", "Alain Prost", "Lewis Hamilton"],
+    correct: 3
   },
   {
     text: "What does DRS stand for?",
     answers: ["Drive Racing Speed", "Drag Reduction System", "Downforce Rear Setup", "Dynamic Racing Style"],
     correct: 1
+  }
+  {
+    text: "Who is Charles Leclerc's biggest rival?",
+    answers: ["Ferarri's strategy team", "Verstappen", "Checo", "Street circuits"],
+    correct: 0
+  }
+{
+    text: "Is there a leakage?" – "A leakage of what?" – "I have the seat full of water... Must be the ____?",
+    answers: ["tyres", "engine", "rain", "water"],
+    correct: 3
+  }
+{
+    text: "What happens if a driver breaks track limits during qualifying?",
+    answers: ["Their lap time is deleted (invalid lap)", "The session is red-flagged", "They must start from the pit lane", "FIA checking"],
+    correct: 0
+  }
+{
+    text: "Do you know how much i love you?",
+    answers: ["yessssss", "no.", "mmmaybe"],
+    correct: 0
   }
 ];
 
@@ -45,10 +65,13 @@ function checkAnswer(index) {
       document.querySelector(".quiz-container").classList.add("hidden");
       document.getElementById("result-box").classList.remove("hidden");
       confetti({
-        particleCount: 200,
-        spread: 100,
-        origin: { y: 0.6 }
+          particleCount: 500,
+          spread: 180,
+          startVelocity: 70,
+          scalar: 1.4,
+          origin: { y: 0.6 }
       });
+
     }
   } else {
     alert("Oops! Wrong answer. Try again!");
@@ -65,7 +88,7 @@ function createHearts() {
     heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
     heart.style.left = `${Math.random() * 100}vw`;
     heart.style.bottom = `-${Math.random() * 20}vh`;
-    heart.style.fontSize = `${1 + Math.random() * 2}rem`;
+    heart.style.fontSize = `${3 + Math.random() * 4}rem`;
     heart.style.animationDuration = `${6 + Math.random() * 4}s`;
     heart.style.animationDelay = `${Math.random() * 4}s`;
     wrapper.appendChild(heart);
